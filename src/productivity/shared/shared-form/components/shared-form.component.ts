@@ -7,12 +7,18 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   template: `
     <form (ngSubmit)="onSubmit()" [formGroup]="form">
       <ng-content select="h2"> </ng-content>
-      <input type="text" placeholder="Task Name" formControlName="taskName" autofocus />
+      <input
+        type="text"
+        placeholder="Task Name"
+        formControlName="taskName"
+        autofocus
+      />
       <textarea
         rows="5"
         placeholder="Description"
         formControlName="description"
       ></textarea>
+      <ng-content select=".event-form__datePicker"> </ng-content>
       <ng-content select="button"> </ng-content>
     </form>
   `
@@ -22,7 +28,8 @@ export class SharedFormComponent {
 
   form = this.fb.group({
     taskName: ["", Validators.required],
-    description: [""]
+    description: [""],
+    date: ["", Validators.required]
   });
 
   @Output() created = new EventEmitter<FormGroup>();

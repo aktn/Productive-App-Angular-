@@ -1,7 +1,6 @@
 .event-form {
   margin: 150px 50px;
   color: #fff;
-
   button {
     color: #fff;
     padding: 13px 25px;
@@ -16,4 +15,29 @@
     font-size: 30px;
     font-family: var(--main-font);
   }
+
+  input {
+    font-size: 16px;
+    padding: 10px 15px;
+    outline: 0;
+    width: 50%;
+    color: #fff;
+    background: transparent;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    border: 1px solid #d1deeb;
+    resize: none;
+    font-family: var(--main-font);
+  }
+}
+
+.calendar {
+  position: absolute;
+  top: 422px;
+  left: 48%;
+  color: #fff;
+}
+
+::placeholder {
+  color: #9c9c9c;
 }

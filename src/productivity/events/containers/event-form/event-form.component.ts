@@ -8,6 +8,22 @@ import { Component } from "@angular/core";
     <div class="event-form">
       <shared-form (created)="createNewTask($event)">
         <h2>Add an event.</h2>
+        <div class="event-form__datePicker">
+          <input
+            matInput
+            [matDatepicker]="picker"
+            placeholder="Choose a date"
+            disabled
+          />
+          <div class="calendar">
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker disabled="false"></mat-datepicker>
+          </div>
+        </div>
+
         <button type="submit">
           Create
         </button>

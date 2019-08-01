@@ -4,6 +4,8 @@ import { NgModule } from "@angular/core";
 import { EventFormComponent } from "./containers/event-form/event-form.component";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
 
 export const ROUTES: Routes = [{ path: "", component: EventFormComponent }];
 
@@ -12,7 +14,9 @@ export const ROUTES: Routes = [{ path: "", component: EventFormComponent }];
     ReactiveFormsModule,
     SharedModule,
     CommonModule,
-    RouterModule.forChild(ROUTES)
+    RouterModule.forChild(ROUTES),
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: [EventFormComponent]
 })
