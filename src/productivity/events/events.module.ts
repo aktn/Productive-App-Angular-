@@ -1,11 +1,11 @@
-import { SharedModule } from "./../shared/shared-form.module";
+import { SharedModule } from "../shared/shared-form.module";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
-import { EventsComponent } from "./containers/events/events.component";
+import { EventFormComponent } from "./containers/event-form/event-form.component";
 import { CommonModule } from "@angular/common";
 import { ReactiveFormsModule } from "@angular/forms";
 
-export const ROUTES: Routes = [{ path: "", component: EventsComponent }];
+export const ROUTES: Routes = [{ path: "", component: EventFormComponent }];
 
 @NgModule({
   imports: [
@@ -14,6 +14,6 @@ export const ROUTES: Routes = [{ path: "", component: EventsComponent }];
     CommonModule,
     RouterModule.forChild(ROUTES)
   ],
-  declarations: [EventsComponent]
+  declarations: [EventFormComponent]
 })
 export class EventsModule {}
