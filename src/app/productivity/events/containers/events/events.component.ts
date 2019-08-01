@@ -6,6 +6,7 @@ import { Component } from "@angular/core";
   template: `
     <div>
       Yo Events
+      <shared-form></shared-form>
     </div>
   `
 })
