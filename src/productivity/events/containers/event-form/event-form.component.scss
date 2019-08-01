@@ -1,0 +1,19 @@
+.event-form {
+  margin: 150px 50px;
+  color: #fff;
+
+  button {
+    color: #fff;
+    padding: 13px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    background: transparent;
+    transition: 0.2s;
+    font-family: var(--main-font);
+  }
+
+  h2 {
+    font-size: 30px;
+    font-family: var(--main-font);
+  }
+}

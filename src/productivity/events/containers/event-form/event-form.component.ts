@@ -5,12 +5,11 @@ import { Component } from "@angular/core";
   selector: "event-form",
   styleUrls: ["event-form.component.scss"],
   template: `
-    <div>
-      Yo Events
+    <div class="event-form">
       <shared-form (created)="createNewTask($event)">
-        <h2>Add an event</h2>
+        <h2>Add an event.</h2>
         <button type="submit">
-          Add
+          Create
         </button>
       </shared-form>
     </div>

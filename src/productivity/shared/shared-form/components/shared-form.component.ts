@@ -5,18 +5,16 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
   selector: "shared-form",
   styleUrls: ["shared-form.component.scss"],
   template: `
-    <div>
-      <form (ngSubmit)="onSubmit()" [formGroup]="form">
-        <ng-content select="h2"> </ng-content>
-        <input
-          type="text"
-          placeholder="Enter a task"
-          formControlName="taskName"
-        />
-        <textarea formControlName="description"></textarea>
-        <ng-content select="button"> </ng-content>
-      </form>
-    </div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <ng-content select="h2"> </ng-content>
+      <input type="text" placeholder="Task Name" formControlName="taskName" autofocus />
+      <textarea
+        rows="5"
+        placeholder="Description"
+        formControlName="description"
+      ></textarea>
+      <ng-content select="button"> </ng-content>
+    </form>
   `
 })
 export class SharedFormComponent {
