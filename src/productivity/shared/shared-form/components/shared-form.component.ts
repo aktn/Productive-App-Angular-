@@ -18,6 +18,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
         placeholder="Description"
         formControlName="description"
       ></textarea>
+      <ng-content select=".days"></ng-content>
       <ng-content select=".event-form__datePicker"> </ng-content>
       <ng-content select="button"> </ng-content>
     </form>

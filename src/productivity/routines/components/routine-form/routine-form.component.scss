@@ -1,0 +1,89 @@
+.routine-form {
+  color: #fff;
+  margin: 150px 50px;
+  font-family: var(--main-font);
+  h2 {
+    font-size: 30px;
+  }
+  button {
+    padding: 13px 25px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 15px;
+    font-family: var(--main-font);
+    background: transparent;
+    transition: 0.2s;
+    display: block;
+    clear: both;
+  }
+  input,
+  textarea {
+    font-size: 16px;
+    padding: 10px 15px;
+    outline: 0;
+    width: 50%;
+    color: #fff;
+    background: transparent;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    border: 1px solid #d1deeb;
+    resize: none;
+    font-family: var(--main-font);
+  }
+  select {
+    outline: none;
+    height: 30px;
+    font-size: 16px;
+    width: 53%;
+    color: #fff;
+    background: transparent;
+    margin-bottom: 30px;
+    font-family: var(--main-font);
+  }
+
+  .days {
+    width: 60%;
+    // height: 30px;
+    margin-bottom: 50px;
+    input {
+      display: none !important;
+    }
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+}
+::placeholder {
+  color: #9c9c9c;
+}
+
+.day {
+  margin: 0 5px 15px 0;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  overflow: auto;
+  float: left;
+
+  label {
+    float: left;
+    width: 5em;
+  }
+  label span {
+    text-align: center;
+    padding: 3px 0px;
+    display: block;
+  }
+  label input {
+    position: absolute;
+    top: -20px;
+  }
+  input:checked + span {
+    background-color: #707680;
+    color: #fff;
+  }
+}
