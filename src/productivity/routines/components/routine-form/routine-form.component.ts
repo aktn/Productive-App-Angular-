@@ -21,7 +21,7 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
         ></textarea>
 
         <select formControlName="section">
-          <option [ngValue]="null" disabled selected>Pick Routine</option>
+          <option value="" disabled selected>Pick Routine</option>
           <option *ngFor="let section of sections" [ngValue]="section">{{
             section
           }}</option>

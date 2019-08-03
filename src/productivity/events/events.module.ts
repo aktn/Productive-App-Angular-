@@ -1,5 +1,4 @@
 import { EventComponent } from "./containers/event/event.component";
-import { SharedModule } from "../shared/shared-form.module";
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { EventFormComponent } from "./components/event-form/event-form.component";
@@ -13,7 +12,6 @@ export const ROUTES: Routes = [{ path: "", component: EventComponent }];
 @NgModule({
   imports: [
     ReactiveFormsModule,
-    SharedModule,
     CommonModule,
     RouterModule.forChild(ROUTES),
     MatDatepickerModule,
