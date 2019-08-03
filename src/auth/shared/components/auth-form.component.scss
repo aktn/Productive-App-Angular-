@@ -1,0 +1,62 @@
+.auth-form {
+  font-family: var(--main-font);
+  color: #fff;
+  h2 {
+    font-size: 30px;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  margin: 150px 50px;
+  width: 50%;
+  min-height: 300px;
+  height: 100%;
+  border-right: 1px solid #fff;
+
+  input {
+    font-size: 16px;
+    padding: 10px 15px;
+    outline: 0;
+    width: 70%;
+    color: #fff;
+    background: transparent;
+    outline: 0;
+    margin-bottom: 30px;
+    margin-right: 5px;
+    border: 1px solid #d1deeb;
+    resize: none;
+    font-family: var(--main-font);
+  }
+  input.ng-invalid.ng-touched {
+    border: 1px solid red;
+  }
+}
+
+:host ::ng-deep {
+  button {
+    padding: 13px 10px;
+    cursor: pointer;
+    color: #fff;
+    width: 100px;
+    font-size: 15px;
+    font-family: var(--main-font);
+    background: transparent;
+    transition: 0.2s;
+    display: block;
+    clear: both;
+  }
+  .error {
+    color: #a94442;
+    background: #f2dede;
+    border: 1px solid #e4b3b3;
+    border-radius: 2px;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 10px 0 0;
+  }
+  button:focus {
+    outline: none;
+  }
+}
