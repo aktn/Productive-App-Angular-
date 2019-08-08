@@ -19,13 +19,28 @@ import { trigger, style, animate, transition } from "@angular/animations";
   template: `
     <div class="app-sidebar">
       <div class="app-sidebar__nav" *ngIf="toggle" [@enterAnimation]>
-        <a class="closebtn" (click)="toggleNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">View Calendar</a>
-        <a href="#">Add Events</a>
-        <a href="#">Add Routine</a>
+        <a routerLink="about" routerLinkActive="active" (click)="toggleNav()"
+          >About</a
+        >
+        <a routerLink="calendar" routerLinkActive="active" (click)="toggleNav()"
+          >View Calendar</a
+        >
+        <a routerLink="events" routerLinkActive="active" (click)="toggleNav()"
+          >Add Events</a
+        >
+        <a routerLink="routines" routerLinkActive="active" (click)="toggleNav()"
+          >Add Routine</a
+        >
       </div>
-      <div class="hamburger-icon" (click)="toggleNav()">&#9776;</div>
+      <div
+        class="hamburger-icon"
+        (click)="toggleNav()"
+        [ngClass]="toggle ? 'open' : ''"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   `
 })
