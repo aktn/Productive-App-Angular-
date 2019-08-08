@@ -1,3 +1,4 @@
+import { AppSidebarComponent } from "./components/app-sidebar/app-sidebar.component";
 import { AuthModule } from "./../auth/auth.module";
 import { ProductivityModule } from "../productivity/productivity.module";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
@@ -7,7 +8,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./containers/app/app.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AppSidebarComponent],
   imports: [
     BrowserAnimationsModule,
     AppRoutingModule,

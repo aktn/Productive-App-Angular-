@@ -1,0 +1,48 @@
+.app-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 30px;
+  font-family: var(--main-font);
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: #fff;
+    padding-top: 30px;
+    @media screen and (min-width: 768px) {
+      width: 30%;
+    }
+
+    a {
+      font-size: 19px;
+      padding: 30px 8px 8px 32px;
+      text-decoration: none;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: line-through;
+      }
+    }
+    .closebtn {
+      font-size: 35px;
+      text-align: right;
+      cursor: pointer;
+      padding-right: 50px;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .hamburger-icon {
+    cursor: pointer;
+    font-size: 30px;
+  }
+}
