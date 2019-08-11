@@ -1,0 +1,22 @@
+.calendar-days {
+  //border: 1px solid #fff;
+  width: 100%;
+  &__day {
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+    padding: 15px;
+    color: #fff;
+    font-family: var(--main-font);
+    font-size: 15px;
+    &:focus {
+      outline: none;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 61px;
+    }
+  }
+}

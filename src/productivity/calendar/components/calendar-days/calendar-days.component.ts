@@ -5,8 +5,21 @@ import { Component } from "@angular/core";
   styleUrls: ["calendar-days.component.scss"],
   template: `
     <div class="calendar-days">
-      Days
+      <button
+        class="calendar-days__day"
+        type="button"
+        *ngFor="let day of days; index as i"
+        (click)="selectDay(i)"
+      >
+        <span [class.active]="i === selected">
+          {{ day }}
+        </span>
+      </button>
     </div>
   `
 })
-export class CalendarDaysComponent {}
+export class CalendarDaysComponent {
+  constructor() {}
+
+  days = ["S", "M", "T", "W", "T", "F", "S"];
+}
