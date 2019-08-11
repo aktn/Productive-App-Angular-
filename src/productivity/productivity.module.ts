@@ -6,6 +6,10 @@ export const ROUTES: Routes = [
   {
     path: "routines",
     loadChildren: "./routines/routines.module#RoutinesModule"
+  },
+  {
+    path: "calendar",
+    loadChildren: "./calendar/calendar.module#CalendarModule"
   }
 ];
 
