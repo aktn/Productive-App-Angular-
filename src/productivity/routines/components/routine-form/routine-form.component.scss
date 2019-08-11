@@ -1,7 +1,10 @@
 .routine-form {
   color: #fff;
-  margin: 150px 50px;
+  margin: 150px 10px;
   font-family: var(--main-font);
+  @media screen and (min-width: 768px) {
+    margin: 150px 50px;
+  }
   h2 {
     font-size: 30px;
   }
@@ -21,7 +24,7 @@
     font-size: 16px;
     padding: 10px 15px;
     outline: 0;
-    width: 50%;
+    width: 90%;
     color: #fff;
     background: transparent;
     margin-bottom: 30px;
@@ -29,24 +32,34 @@
     border: 1px solid #d1deeb;
     resize: none;
     font-family: var(--main-font);
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
   select {
     outline: none;
     height: 30px;
     font-size: 16px;
-    width: 53%;
+    width: 99%;
     color: #fff;
     background: transparent;
     margin-bottom: 30px;
+    border-radius: 0%;
+    border-color: #fff;
     font-family: var(--main-font);
+    @media screen and (min-width: 768px) {
+      width: 52.5%;
+    }
   }
 
   .days {
-    width: 60%;
-    // height: 30px;
+    width: 100%;
     margin-bottom: 50px;
     input {
       display: none !important;
+    }
+    @media screen and (min-width: 768px) {
+      width: 60%;
     }
   }
 

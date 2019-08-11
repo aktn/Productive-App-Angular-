@@ -1,5 +1,5 @@
 .event-form {
-  margin: 150px 50px;
+  margin: 180px 10px;
   color: #fff;
   button {
     color: #fff;
@@ -9,6 +9,9 @@
     background: transparent;
     transition: 0.2s;
     font-family: var(--main-font);
+  }
+  @media screen and (min-width: 768px) {
+    margin: 150px 50px;
   }
 
   h2 {
@@ -21,7 +24,7 @@
     font-size: 16px;
     padding: 10px 15px;
     outline: 0;
-    width: 50%;
+    width: 90%;
     color: #fff;
     background: transparent;
     margin-bottom: 30px;
@@ -29,14 +32,21 @@
     border: 1px solid #d1deeb;
     resize: none;
     font-family: var(--main-font);
+    @media screen and (min-width: 768px) {
+      width: 50%;
+    }
   }
 }
 
 .calendar {
   position: absolute;
-  top: 430px;
-  left: 48%;
+  top: 460px;
+  left: 80%;
   color: #fff;
+  @media screen and (min-width: 768px) {
+    left: 48%;
+    top: 430px;
+  }
 }
 
 ::placeholder {
