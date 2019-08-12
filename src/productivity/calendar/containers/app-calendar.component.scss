@@ -1,9 +1,7 @@
 .app-calendar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 100px;
+  width: 100%;
+  margin-top: 120px;
   @media screen and (min-width: 768px) {
-    padding-top: 150px;
+    margin-top: 150px;
   }
 }

@@ -1,13 +1,17 @@
 .calendar-controls {
   display: flex;
-  flex-direction: row;
   button {
+    flex: 1;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
   }
   p {
+    flex: 10;
     text-align: center;
     color: #fff;
-    min-width: 560px;
   }
 }
