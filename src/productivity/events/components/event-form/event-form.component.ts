@@ -46,7 +46,7 @@ export class EventFormComponent {
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      //this.created.emit(this.form);
+      this.created.emit(this.form.value);
     }
   }
 
