@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "calendar-controls",
@@ -18,7 +18,7 @@ import { Component } from "@angular/core";
           />
         </svg>
       </button>
-      <p>11 August 2019</p>
+      <p>{{ selected | date: "yMMMMd" }}</p>
       <button type="button" (click)="moveDate(offset + 1)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -35,4 +35,7 @@ import { Component } from "@angular/core";
     </div>
   `
 })
-export class CalendarControlsComponent {}
+export class CalendarControlsComponent {
+  @Input()
+  selected: Date;
+}

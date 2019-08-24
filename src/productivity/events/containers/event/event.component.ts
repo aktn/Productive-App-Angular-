@@ -1,5 +1,6 @@
-import { FormGroup } from "@angular/forms";
 import { Component } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { Schedule } from "src/models/schedule.model";
 
 @Component({
   selector: "event",
@@ -8,4 +9,6 @@ import { Component } from "@angular/core";
     <event-form></event-form>
   `
 })
-export class EventComponent {}
+export class EventComponent {
+  constructor(public store: Store<Schedule>) {}
+}
