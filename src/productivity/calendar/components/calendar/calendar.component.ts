@@ -7,11 +7,15 @@ import { Component, Input } from "@angular/core";
     <div class="calendar">
       <calendar-controls [selected]="selectedDay"></calendar-controls>
       <calendar-days></calendar-days>
+      <display-events [items]="scheduled"></display-events>
     </div>
   `
 })
 export class CalendarComponent {
-  //selectedDay: Date;
-
   selectedDay: Date = new Date();
+
+  constructor() {}
+
+  @Input()
+  scheduled: any;
 }

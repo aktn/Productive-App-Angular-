@@ -18,7 +18,7 @@ import { Component, Input } from "@angular/core";
           />
         </svg>
       </button>
-      <p>{{ selected | date: "yMMMMd" }}</p>
+      <p>{{ selected | date: "d MMMM y" }}</p>
       <button type="button" (click)="moveDate(offset + 1)">
         <svg
           xmlns="http://www.w3.org/2000/svg"

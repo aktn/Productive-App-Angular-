@@ -1,3 +1,4 @@
+import { DisplayEventsComponent } from "./components/display-events/display-events.component";
 import { CalendarDaysComponent } from "./components/calendar-days/calendar-days.component";
 import { CalendarControlsComponent } from "./components/calendar-controls/calendar-controls.component";
 import { CalendarComponent } from "./components/calendar/calendar.component";
@@ -14,7 +15,8 @@ export const ROUTES: Routes = [{ path: "", component: AppCalendarComponent }];
     AppCalendarComponent,
     CalendarComponent,
     CalendarControlsComponent,
-    CalendarDaysComponent
+    CalendarDaysComponent,
+    DisplayEventsComponent
   ]
 })
 export class CalendarModule {}

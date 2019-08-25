@@ -1,0 +1,20 @@
+.display-events {
+  ul {
+    padding: 1px 0;
+    li {
+      background-color: #f3f3f3;
+      list-style-type: none;
+      font-family: --main-font;
+      color: #3d3d3f;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      border-radius: 2px;
+      box-shadow: 0 0 5px rgb(85, 92, 88);
+      .date {
+        color: #6e6e6b;
+        font-size: 14px;
+      }
+    }
+  }
+}
