@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "calendar-controls",
@@ -36,6 +36,14 @@ import { Component, Input } from "@angular/core";
   `
 })
 export class CalendarControlsComponent {
-  @Input()
-  selected: Date;
+  @Input() selected: Date;
+
+  @Output() switch = new EventEmitter<number>();
+
+  offset = 0;
+
+  moveDate(offset: number) {
+    this.offset = offset;
+    this.switch.emit(offset);
+  }
 }
