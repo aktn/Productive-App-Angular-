@@ -3,5 +3,9 @@ import { BehaviorSubject, Observable, Subject } from "rxjs";
 
 @Injectable()
 export class CalendarService {
-  private date$ = new BehaviorSubject(new Date());
+  public date$ = new BehaviorSubject(new Date());
+
+  updateDate(date: Date) {
+    this.date$.next(date);
+  }
 }
