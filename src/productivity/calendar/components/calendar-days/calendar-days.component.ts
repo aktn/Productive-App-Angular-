@@ -1,8 +1,14 @@
-import { Component } from "@angular/core";
-import { ChangeDetectionStrategy } from "@angular/compiler/src/core";
+import {
+  Component,
+  Input,
+  EventEmitter,
+  Output,
+  ChangeDetectionStrategy
+} from "@angular/core";
 
 @Component({
   selector: "calendar-days",
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ["calendar-days.component.scss"],
   template: `
     <div class="calendar-days">
@@ -11,8 +17,9 @@ import { ChangeDetectionStrategy } from "@angular/compiler/src/core";
         type="button"
         *ngFor="let day of days; index as i"
         (click)="selectDay(i)"
+        [class.active]="i === selected"
       >
-        <span [class.active]="i === selected">
+        <span>
           {{ day }}
         </span>
       </button>
@@ -22,5 +29,12 @@ import { ChangeDetectionStrategy } from "@angular/compiler/src/core";
 export class CalendarDaysComponent {
   constructor() {}
 
+  @Input() selected: number;
+
   days = ["S", "M", "T", "W", "T", "F", "S"];
+
+  @Output() select = new EventEmitter<number>();
+  selectDay(index: number) {
+    this.select.emit(index);
+  }
 }

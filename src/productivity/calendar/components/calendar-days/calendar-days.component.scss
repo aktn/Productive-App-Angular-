@@ -8,6 +8,10 @@
     color: #fff;
     font-family: var(--main-font);
     font-size: 15px;
+    &.active {
+      background: #949292;
+      color: #fff;
+    }
     &:focus {
       outline: none;
     }

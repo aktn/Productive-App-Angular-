@@ -1,3 +1,4 @@
+import { SharedModule } from "./../shared/shared.module";
 import { DisplayEventsComponent } from "./components/display-events/display-events.component";
 import { CalendarDaysComponent } from "./components/calendar-days/calendar-days.component";
 import { CalendarControlsComponent } from "./components/calendar-controls/calendar-controls.component";
@@ -10,7 +11,7 @@ import { RouterModule, Routes } from "@angular/router";
 export const ROUTES: Routes = [{ path: "", component: AppCalendarComponent }];
 
 @NgModule({
-  imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  imports: [CommonModule, RouterModule.forChild(ROUTES), SharedModule],
   declarations: [
     AppCalendarComponent,
     CalendarComponent,

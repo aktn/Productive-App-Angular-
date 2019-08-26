@@ -1,5 +1,6 @@
 import { RouterModule, Routes } from "@angular/router";
 import { NgModule } from "@angular/core";
+import { SharedModule } from "./shared/shared.module";
 
 export const ROUTES: Routes = [
   { path: "events", loadChildren: "./events/events.module#EventsModule" },
@@ -14,6 +15,6 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(ROUTES)]
+  imports: [RouterModule.forChild(ROUTES), SharedModule.forRoot()]
 })
 export class ProductivityModule {}
